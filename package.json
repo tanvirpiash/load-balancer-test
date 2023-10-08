@@ -5,15 +5,15 @@
    "main": "index.js",
    "type": "module",
    "scripts": {
-      "start": "pm2 start index.js -i max && pm2 logs",
-      "stop": "pm2 stop all",
+      "start": "pm2 start index.js -i 0 && pm2 logs",
+      "stop": "pm2 stop all && pm2 delete all",
       "list": "pm2 list",
       "load-test": "loadtest -n 100000 -c 100 http://localhost:3000/heavy-load"
    },
    "keywords": [],
    "author": "",
-   "license": "ISC",
-   "dependencies": {
+   "license": "MIT",
+   "devDependencies": {
       "express": "^4.18.2",
       "loadtest": "^8.0.3"
    }
